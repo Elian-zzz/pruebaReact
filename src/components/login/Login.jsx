@@ -30,7 +30,7 @@ export default function Login(){
             password: password
         };
          // Guarda true si el usuario ya existía en el arreglo usuarios
-        const usuarioExiste = usuarios.some((usuario) => usuario.userName === nuevoUsuario.userName);
+        const usuarioExiste = userName && password ? usuarios.some((usuario) => usuario.userName === nuevoUsuario.userName) : false;
 
 
             console.log("Registrando usuario...");
